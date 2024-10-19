@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="i1"></p>
+    <p id="i2"></p>
+
+    <script>
+        class student {
+            constructor(name, Byear) {
+                this.name = name;
+                this.Byear = Byear;
+            }
+
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.Byear; //2024-2013
+            }
+        }
+        s1 = new student("Pragyan", 2013);
+        s2 = new student("Vini", 2015);
+        s1.age();
+
+        document.getElementById("i1").innerHTML = "Student name is " + s1.name + "." + "<br>" + "Who is " + s1.age() + " year's old."
+    </script>
+</body>
+
+</html>
